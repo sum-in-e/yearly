@@ -51,23 +51,21 @@ const Timeline = ({
   if (error) return <div>Error: {(error as Error).message}</div>;
 
   return (
-    <div className="p-4">
-      <div
-        ref={timelineRef}
-        className={cn(
-          "mb-8 overflow-x-auto whitespace-nowrap",
-          CLASSNAMES.TIMELINE_SCROLL,
-        )}
-        style={{ scrollBehavior: "smooth" }}
-      >
-        <TimelineSVG
-          years={years}
-          data={data || []}
-          selectedYear={selectedYear}
-          currentYear={currentYear}
-          onYearClick={handleYearClick}
-        />
-      </div>
+    <div
+      ref={timelineRef}
+      className={cn(
+        "mb-8 overflow-x-auto whitespace-nowrap rounded-lg border",
+        CLASSNAMES.TIMELINE_SCROLL,
+      )}
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <TimelineSVG
+        years={years}
+        data={data || []}
+        selectedYear={selectedYear}
+        currentYear={currentYear}
+        onYearClick={handleYearClick}
+      />
     </div>
   );
 };

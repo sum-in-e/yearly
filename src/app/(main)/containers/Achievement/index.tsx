@@ -28,7 +28,7 @@ const Achievement = ({
     <Card>
       <CardHeader className="mb-5 border-b border-gray-200 bg-gray-50 px-4 py-6">
         <CardTitle className="flex items-center justify-between">
-          <span>나의 실현 목록</span>
+          <span className="text-xl lg:text-2xl">나의 실현 목록</span>
           <YearSelector
             years={years}
             selectedYear={selectedYear}
